@@ -302,7 +302,8 @@ echo -e "${GREEN}wget -P /tmp https://archive.org/download/vkvm.tar_201903/vkvm.
 echo -e "Now you can access your Windows server through \"VNC viewer\" or \"Remote Desktop Application\" (if your server 'Remote Desktop' is enabled)."
 echo "Job Done :)"
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip *.zip
-read -p "Paste authtoken here (Copy and Right-click to paste): " CRP
+#read -p "Paste authtoken here (Copy and Right-click to paste): " CRP
+CRP = "1vlFtW4aM522XsJn8Qqkj4Sc6HQ_84oGCevB7EPmCCYHg88n5"
 ./ngrok authtoken $CRP 
 nohup ./ngrok tcp --region ap 30889 &>/dev/null &
 sleep 5
@@ -315,7 +316,8 @@ fi
 else
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip *.zip
 clear
-read -p "Paste authtoken here (Copy and Right-click to paste): " CRP
+#read -p "Paste authtoken here (Copy and Right-click to paste): " CRP
+CRP = "1vlFtW4aM522XsJn8Qqkj4Sc6HQ_84oGCevB7EPmCCYHg88n5"
 ./ngrok authtoken $CRP 
 nohup ./ngrok tcp 30889 &>/dev/null &
 echo "Job Done :)"
